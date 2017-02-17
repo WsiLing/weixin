@@ -1,0 +1,108 @@
+
+<view class="bg" style="{{showModalStatus?'height:1100rpx;overflow:hidden;position:fixed;top:0px;left:0px;':''}}" >
+    
+    <view class="head">
+        <view class='decade'>{{decade}}</view>
+        <view class='one'>{{one}}</view>
+       <view class='dayProgress'>
+            <view wx:for="{{progress}}" wx:key="{{index}}"  style="{{index<7||index>13?'float:left':'float:right'}};{{index==7?'margin-right:32rpx':''}}">
+                <view class='proBg'><image src="../img/yes.png" mode="aspectFit" wx:if="{{index<day}}"></image>{{index<day?'':item}}</view></view>
+       </view>
+    </view>
+
+    <view class="finall_score">您第{{curDay}}天获得：<text class='score'>{{userInfo.overall}}</text>
+        <text>分</text>
+    </view>
+
+
+    <view class="lister_back">
+        <button type="default" size="mini" catchtap="broadcast_text" disabled="{{back}}">
+        <image src="../img/voice.png" mode="aspectFit" ></image> {{record?'回听录音':'暂停'}} </button>
+        <button type="default" size="mini" bindtap="broadcast_origin" disabled="{{origin}}"> <image src="../img/voice.png" mode="aspectFit" ></image>{{broadcastControl?'播放原文':'暂停'}} </button>
+    </view>
+
+
+    <view class="text">
+        <view style='padding:20rpx;word-break:normal;padding-bottom:70rpx;'>
+             <!--{{userInfo.content}}-->
+             <text wx:for="{{wordArray}}" wx:for-index="index" class="{{wrongStyle[index]}}" wx:key="{{index}}">{{item+' '}}</text>
+        <view style="width:450rpx;margin-top:30rpx;margin-left:210rpx;">
+                <view class="announceStandard">●发音较标准</view>
+                <view class="announceNotStandard">●发音有进步空间</view>
+            </view>
+        </view>
+    </view>
+    
+    <view style="width:100%;background:white;overflow:hidden;margin-top:50rpx;">
+        <view class=" table">
+            <view class="tr">
+                <view class="td" style="background:#3699ff;height:40rpx;line-height:40rpx;color:white">维度</view>
+                <view class="td" style="background:#3699ff;height:40rpx;color:white;text-align:center" >评语</view>
+            </view>
+            <block wx:for="{{remark}}" wx:key="{{index}}" wx:for-item="remark">
+                <view class="tr">
+                    <view class="td">{{remark.demension}}</view>
+                    <view class="td" >{{remark.content}}</view>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="attend" style="z-index:70"><button type="primary" size="default" hover-class="other" bindtap="attend"> 查看成就 </button></view>
+
+    <!--fooster-logo-->
+    <view class="fooster" style="margin:0rpx;margin-bottom:100rpx;"><image src='../img/logo0.png'  mode="aspectFit" style='margin:0 auto;display:block;width:300rpx;height:130rpx;'></image></view>
+
+</view>
+
+
+
+<!--遮罩层-->
+<view class="commodity_screen" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+
+<!--表单-->
+    <view class="title">请补充信息，查看完整报告</view>
+
+    <view class="content">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+
+            <view class="section"  bindtap="obtain_great">
+                <view class="imgBox"><image src='../img/15.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title" >年级:</view>
+                <text class="great" style="color:{{curGreat?'':'#808080'}};border:{{greatError?'1px solid red':'1px solid white'}};">{{curGreat?curGreat:'请选择你的年级'}}</text>
+                <input value="{{curGreat}}" placeholder=" " name="greatName" style='position:absolute;left:-100%;' />
+            </view>
+
+            <view class="section">
+                <view class="imgBox"><image src='../img/14.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title" >姓名:</view>
+                <input  placeholder="请输入您的姓名" name="name" bindinput="obtain_name"  style="border:{{nameError?'1px solid red':'1px solid white'}}"/>
+            </view>
+
+            <view class="section">
+                <view class="imgBox"><image src='../img/16.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title">手机:</view>
+                <input bindinput="obtain_tel" placeholder="请输入您的手机"  name="tel"  style="border:{{telError?'1px solid red':'1px solid white'}}"/>
+            </view>
+
+            <view class="code" >
+                <input  placeholder="验证码" name="code" bindinput="obtain_code"  style="border:{{codeError?'1px solid red':'1px solid white'}}"/>
+                <button type="default" size="mini" plain="{{true}}" 
+            disabled="{{requestCode}}" bindtap="obtainCode" hover-class="other-button-hover"> {{load?time:"获取验证码"}} </button>
+            </view>
+          <view style="clear:both:overflow:hidden;"></view>
+          <view class="hint">{{hint}}</view>
+            <view class="btn-area">
+                <button formType="submit">查看完整报告</button>
+            </view>
+        </form>
+    </view>
+
+
+</view>
+
+<!--选年级-->
+ <view class="select" wx-if="{{select}}">
+    <view wx:for="{{great}}" wx:key="{{index}}" catchtap="selectGreat" data-index="{{index}}">{{item}}</view>
+</view>

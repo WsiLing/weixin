@@ -1,0 +1,15 @@
+.attend{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left: 0; 
+    z-index: 99;
+    font-weight: bold;
+    text-align: center;
+}
+.attend button{
+    background: #3699ff;
+    border-radius:0px;
+    letter-spacing: 4rpx;
+    margin: 0 auto;
+}

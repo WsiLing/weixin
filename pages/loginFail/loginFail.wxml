@@ -1,0 +1,11 @@
+<view class="group" style="padding-top:200rpx;text-align:center;">
+  <block>
+    <icon type="cancel" size="100" color="#3699ff"/>
+  </block>
+</view>
+
+<view style="text-align:center;padding:60rpx;line-height:60rpx;color:#3699ff;font-weight:bloder;font-weight:bolder;">
+    授权失败
+</view>
+
+   <view class="attend"><button type="primary" size="default" hover-class="other" bindtap="attend"> 重新登录 </button></view>

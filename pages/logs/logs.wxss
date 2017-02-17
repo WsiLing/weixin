@@ -1,0 +1,234 @@
+.hint{
+    text-align:center;
+    font-size:35rpx;
+    background:#eeeeee;
+    height:100rpx;
+    color:#888888;
+    overflow:hidden;
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+}
+.hint image{
+    width:80rpx;
+    height:80rpx;
+}
+
+.bg{
+    background: #f0eff5;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    width: 100%;
+}
+.head{
+    overflow: hidden;
+    background:url('http://qy.gzpeiyou.com/Public/60s/progressBg.png');
+    width: 100%;
+    height:665rpx;
+    background-size: 100%;
+}
+
+.head .decade{
+    color: #3699ff;
+    font-size: 100rpx;
+    z-index: 10;
+    font-weight: bold;
+    position: absolute;
+    top:85rpx;
+    left:360rpx; 
+}
+.head .one{
+    color: #3699ff;
+    font-size: 100rpx;
+    z-index: 10;
+    font-weight: bold;
+    position: absolute;
+    left:460rpx; 
+    top:85rpx;
+}
+
+.dayProgress{
+    overflow: hidden;
+    margin:0 5%;
+    margin-top: 275rpx;
+    padding-left: 55rpx;
+}
+.dayProgress .proBg{
+    display: block;
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border: 2px solid #0594ea;
+    border-radius: 50%;
+    background: #e1f0ff;
+}
+.dayProgress view{
+    float:left;
+    width: 85rpx;
+    font-size: 25rpx;
+    text-align: center;
+    height: 87rpx;
+}
+.dayProgress view image{
+    width:60rpx;
+    height: 40rpx;
+}
+/*.head{
+    overflow: hidden;
+    background: #d7ebff;
+}
+.head image{
+    width: 100%;
+    height: 200rpx;
+    position: relative;
+}
+.head view{
+    position: absolute;
+    color: #3699ff;
+    font-size: 120rpx;
+    z-index: 10;
+    font-weight: bold;
+}
+.head .decade{
+    top:20rpx;
+    left:95rpx; 
+}
+.head .one{
+    left:225rpx; 
+    top:20rpx;
+}*/
+.record_progress{
+    position: relative;
+    background: #d7ebff;
+}
+.record_progress .proimg{
+    position: absolute;
+    top:0rpx;
+    left: 0;
+    z-index: 10;
+}
+.record_progress .imgbg{
+    z-index: 1;
+}
+.record_progress  image{
+    height: 480rpx;
+    width:100%;
+}
+
+.dayBox{
+    text-align: center;
+    background:white;
+    padding: 30rpx;
+    font-size:40rpx;
+    color:#333;
+    padding-top: 0;
+}
+.dayBox text{
+    color:#3699ff;
+    font-size:50rpx;
+}
+.dayBox .successDay{
+    font-size: 110rpx;
+    border-bottom: 2px solid #3699ff;
+    padding: 0 35rpx;
+    margin: 0 10rpx;
+}
+
+.waitHintText {
+    text-align: center;
+    background: white;
+    width: 100%;
+    padding: 30rpx;
+}
+.waitHintText .tr{
+    display: flex;
+    
+}
+.waitHintText .tr button{
+    padding:0 30rpx;
+    color:#5ca8ff;
+    vertical-align:middle;
+
+}
+.waitHintText .tr view{
+    margin: 2rpx;
+    padding: 15rpx;
+    width: 202rpx;
+    background: #cbe5ff;
+    height:65rpx;
+    padding-top:0;
+    line-height:75rpx;
+}
+.waitHintText .thead view{
+    background:#0594ea;
+    color:white;
+}
+
+.waitHintText .hintText{
+    font-size: 30rpx;
+    color:#999;
+    margin-bottom: 20rpx;
+}
+
+/*
+.fooster {
+    width: 100%;
+    text-align: center;
+}
+.fooster image {
+    width: 100%;
+    height:62px;
+}*/
+
+/*信息补充*/
+.commodityScreen { width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: #000; opacity: 0.2; overflow: hidden; z-index: 90; color: #fff;}
+.commodityAttr_box { width: 100%; overflow: hidden; position: fixed; top: 100rpx; left: 0; z-index: 99; padding-top: 20rpx;font-size: 30rpx;}
+.commodityAttr_box view{
+    text-align: center;
+    color:666;
+    font-size: 35rpx;
+    line-height: 40rpx;
+}
+
+
+.record_progress{
+    position: relative;
+}
+.record_progress .progressTitle{
+    position: absolute;
+    left: 30rpx;
+    top:20rpx;
+    font-size: 50rpx;
+    color:#8360B9;
+}
+.record_progress .day{
+    position: absolute;
+    bottom:10rpx;
+    font-size: 50rpx;
+    color:#8360B9;
+    text-align: center;
+    width: 100%;
+}
+.record_progress .day text{
+    font-weight: bold;
+    font-size: 45rpx;
+    text-decoration: underline;
+    padding: 0 10rpx;
+}
+
+.attend{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    left: 0; 
+    z-index: 50;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+.attend button{
+    background: #3699ff;
+    border-radius:0px;
+    letter-spacing: 4rpx;
+}
+
+

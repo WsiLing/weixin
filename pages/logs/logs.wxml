@@ -1,0 +1,43 @@
+<!--提示下拉刷新-->
+<view class="hint" animation="{{animationData}}"  wx:if="{{showRefreshStatus}}">
+    <image src='../img/arrow.png'  mode="aspectFit"  animation="{{animationData}}"></image>
+    <text>下拉可以刷新成绩...</text>
+</view>
+
+<view class='bg'>
+
+    <view class="head">
+        <view class='decade'>{{decade}}</view>
+        <view class='one'>{{one}}</view>
+       <view class='dayProgress'>
+            <view wx:for="{{progress}}" wx:key="{{index}}"  style="{{index<7||index>13?'float:left':'float:right'}};{{index==7?'margin-right:32rpx':''}}">
+                <view class='proBg'><image src="../img/yes.png" mode="aspectFit" wx:if="{{index<day}}"></image>{{index<day?'':item}}</view></view>
+       </view>
+    </view>
+
+    <view style="text-align:center;font-size:40rpx;font-weight:bolder;padding:40rpx;">打卡日志</view>
+    <view class="waitHintText">
+        <view class='thead tr'>
+        <view>打卡天数</view><view>分数</view><view>分析报告   </view>
+        </view>
+        <view class='tr' wx:for="{{progress}}"  wx:key="{{index}}">
+        <view>第{{item}}天</view>
+        <view>{{greatList[item].status=='1'?greatList[item].overall:(greatList[item].status=='2'?"生成中":'')}}</view>
+        <view><button type="default" size="mini" catchtap="lookGreat" data-id="{{greatList[item].day}}" wx:if="{{greatList[item].overall}}" data-status="{{greatList[item].status}}" data-day="{{index}}" disabled="{{greatList[item].status=='2'}}">查看报告</button></view>
+        </view>
+    </view>
+
+    <!--fooster-logo-->
+    <view class="fooster" style="margin:0rpx;margin-bottom:100rpx;"><image src='../img/logo0.png'  mode="aspectFit" style='margin:0 auto;display:block;width:300rpx;height:130rpx;'></image></view>
+</view>
+
+<view class="attend" style="z-index:70"><button type="primary" size="default" hover-class="other" bindtap="attend"> 查看成就 </button></view>
+
+<!--下拉提示-->
+<!--遮罩层-->
+<!--<view class="commodityScreen" wx:if="{{showRefreshStatus}}"></view>
+<view animation="{{animationData}}" class="commodityAttr_box" wx:if="{{showRefreshStatus}}">
+    <image src="../img/loading.png" mode="aspectFit"></image>
+    <view>下拉可以刷新哦</view>
+</view>-->
+

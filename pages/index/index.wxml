@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="recite_bg" wx:if="{{!submit_recordSuccess}}">
+  <view class="text">
+    <view class="recite_title">
+      <text style="font-size:35rpx;margin-right:10rpx;">●</text>模仿朗读
+    </view>
+    <view class="recite_content">
+      <view style='padding:30rpx;margin:40rpx 0rpx;background:#ecf7fc;font-size:35rpx;'> {{text.content}}</view>
+
+      <view  class='translate'>
+        <view class='title'><image src="../img/translate.png" mode="aspectFit"></image>译文</view>
+        <view class='content'>{{text.chinese}}</view>
+      </view>
+      
+      <view  class='know'>
+        <view class='title'><image src="../img/book.png" mode="aspectFit"></image>知识点</view>
+        <view class='content'>{{wrongWord}}</view>
+        <view class='content'>{{text.translate}}</view>
+      </view>
+      <!--<text>
+          {{text.content}}
+      </text>-->
+
+
+
+    </view>
+    <view class="btn_broadcast"><button type="default" size="mini"  disabled="{{broadcastOriginalText}}" bindtap="broadcast_origin" style="color:{{broadcastOriginalText?'#ccc':'#3699ff'}};background:white;border:1px solid #a2d0ff;width:210rpx;"> {{broadcastControl?'播放原文':'暂停'}} </button></view>
+  </view>
+  
+
+  <view class="clear"></view>
+  <view class="recite_start">
+    
+    <!--<progress percent="{{progress}}" color='#3699ff'>{{time}}</progress>-->
+  </view>
+  <view class="clear"></view>
+  <view class="recite_end">
+    <button type="default" size="mini" catchtap="start_recording" disabled="{{recordStart_disabled}}"> {{recordStart_btn}} </button>
+    <button type="default" size="mini" catchtap="finish_record" disabled="{{recordFinish_disable}}"> 录制完成 </button>
+    <button type="default" size="mini" disabled="{{recordBack_disable}}" catchtap="backListen"> {{recordBack_btn}} </button>
+  </view>
+  <view style="padding:0 40rpx;">
+    <button type="default" size="default" style="background:{{recordSubmit_disable?'#f1f1f1':'#3699ff'}};color:{{recordSubmit_disable?'gray':'white'}};" catchtap="submit_recording" disabled="{{recordSubmit_disable}}"> 提交录音 </button>
+  </view>
+
+  <!--fooster-logo-->
+    <view class="fooster" style="margin:0rpx;"><image src='../img/logo0.png'  mode="aspectFit" style='margin:0 auto;display:block;width:300rpx;height:130rpx;'></image></view>
+
+</view>

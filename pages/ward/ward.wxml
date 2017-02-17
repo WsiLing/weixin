@@ -1,0 +1,73 @@
+<view class='ward'>
+    <view>{{name}}</view>
+    <image src='{{Img}}' mode="aspectFit"></image>
+</view>
+
+<!--<view class="attend"  wx:if="{{!id}}"><button type="primary" size="default" hover-class="other" bindtap="showShareModal" > 昭告天下 </button></view>-->
+
+<view class="attend" wx:if="{{id}}" bindtap="attend"><button type="primary" size="default" hover-class="other" > 马上参加 </button></view>
+
+<!--<view class="commodity_screen" wx:if="{{showShareStatus}}" catchtap="hideShareModal"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showShareStatus}}" catchtap="hideShareModal">
+    <image src='../img/share.png'  mode="aspectFit"></image>
+    <view class='content'>
+        <view class='title'>如何分享？</view>
+        <view><text>Step1.</text><text>点击右上角的┇</text></view>
+        <view>
+            <text>Step2.</text>再点击<image src='../img/smallShare.png'  mode="aspectFit"></image>分享给好友
+        </view>
+        <view><text>Step3.</text><text>选择需要分享的好友</text></view>
+    </view>
+</view>-->
+
+<!--信息补充-->
+
+<!--遮罩层-->
+<view class="commodityScreen" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodityAttr_box" wx:if="{{showModalStatus}}">
+
+<!--表单-->
+    <view class="title">请补充信息，查看完整报告</view>
+
+    <view class="content">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+
+            <view class="section"  bindtap="obtain_great">
+                <view class="imgBox"><image src='../img/15.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title" >年级:</view>
+                <text class="great" style="color:{{curGreat?'':'#808080'}};border:{{greatError?'1px solid red':'1px solid white'}};">{{curGreat?curGreat:'请选择你的年级'}}</text>
+                <input value="{{curGreat}}" placeholder=" " name="greatName" style='position:absolute;left:-100%;' />
+            </view>
+
+            <view class="section">
+                <view class="imgBox"><image src='../img/14.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title" >姓名:</view>
+                <input  placeholder="请输入您的姓名" name="name" bindinput="obtain_name"  style="border:{{nameError?'1px solid red':'1px solid white'}}"/>
+            </view>
+
+            <view class="section" >
+                <view class="imgBox"><image src='../img/16.png'  mode="aspectFit"></image></view>
+                <view class="seciton_title">手机:</view>
+                <input bindinput="obtain_tel" placeholder="请输入您的手机"  name="tel" style="border:{{telError?'1px solid red':'1px solid white'}}"/>
+            </view>
+
+            <view class="code" >
+                <input  placeholder="验证码" name="code" bindinput="obtain_code"  style="border:{{codeError?'1px solid red':'1px solid white'}}"/>
+                <button type="default" size="mini" plain="{{true}}" 
+            disabled="{{requestCode}}" bindtap="obtainCode" hover-class="other-button-hover"> {{load?time:"获取验证码"}} </button>
+            </view>
+          <view style="clear:both:overflow:hidden;"></view>
+          <view class="hint">{{hint}}</view>
+            <view class="btn-area">
+                <button formType="submit">查看完整报告</button>
+            </view>
+        </form>
+    </view>
+
+
+</view>
+
+<!--选年级-->
+ <view class="select" wx-if="{{select}}">
+    <view wx:for="{{great}}" wx:key="{{index}}" catchtap="selectGreat" data-index="{{index}}">{{item}}</view>
+</view>

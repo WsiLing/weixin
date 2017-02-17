@@ -1,0 +1,19 @@
+<view class='bg' style='position:fixed;'>
+    <view class="head">
+        <view class='decade'>{{decade}}</view>
+        <view class='one'>{{one}}</view>
+       <view class='dayProgress'>
+            <view wx:for="{{progress}}" wx:key="{{index}}"  style="{{index<7||index>13?'float:left':'float:right'}};{{index==7?'margin-right:32rpx':''}}">
+                <view class='proBg'><image src="../img/yes.png" mode="aspectFit" wx:if="{{index<day}}"></image>{{index<day?'':item}}</view></view>
+       </view>
+    </view>
+
+    <view class="waitHintText">
+        <view class='hintText'>报告玩命生成中</view>
+         <view class='hintText'> </view>
+    </view>
+
+    <!--fooster-logo-->
+    <view class="fooster" style="position:fixed;bottom:0;left:0;width:100%;background:#f0eff5;"><image src='../img/logo0.png'  mode="aspectFit" style='margin:0 auto;display:block;width:300rpx;height:130rpx;'></image></view>
+</view>
+

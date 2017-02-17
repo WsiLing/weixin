@@ -1,0 +1,19 @@
+<view class='bg'>
+     <!--head-logo-->
+    <view class="head" style="margin:0rpx;padding-top:32rpx;"><image src='../img/logo0.png'  mode="aspectFit" style='margin:0 auto;display:block;width:300rpx;height:130rpx;'></image></view>
+    <view class="progressDay">
+            <view>第</view>
+            <view class="decade">{{decade}}</view>
+            <view class='one'>{{one}}</view>
+            <view>天</view>
+    </view>
+
+    <view class="imageUrl"><image src="{{userInfo.avatarUrl}}"></image></view>
+    <view class='attend' catchtap="attend">我要打卡</view>
+    <view class='text'>
+        <view>活动规则： </view>
+         <view>1. 活动每天会更换一篇语料，通过录音的形式参与打卡。 </view>
+         <view>2. 提交录音后，会生成一份分析您口语的报告。 </view>
+         <view>3. 若中断打卡，再次后从第一天开始累计。 </view>
+    </view>
+</view>

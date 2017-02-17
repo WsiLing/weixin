@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/wait/wait",
+    "pages/logs/logs",
+    "pages/index/index",
+    "pages/result/result",
+    "pages/ward/ward",
+    "pages/loginFail/loginFail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3699ff",
+    "navigationBarTitleText": "21天口语养成计划",
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh":"true"
+  },
+  
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

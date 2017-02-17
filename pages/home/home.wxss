@@ -1,0 +1,77 @@
+page{
+    min-height: 100%;
+}
+.bg{
+    width: 100%;
+    background: url('http://qy.gzpeiyou.com/Public/60s/home.png') no-repeat;
+    background-color: #0093ee;
+    background-size: 100%;
+    height: 1240rpx;
+    position: relative;
+    font-family: "微软雅黑";
+    margin-top: -4rpx;
+}
+
+
+.bg .progressDay{
+    margin: 60rpx auto;
+    overflow: hidden;
+    width: 320rpx;
+}
+.bg .progressDay view{
+    float: left;
+    width: 60rpx;
+    text-align: center;
+    height: 150rpx;
+    line-height: 150rpx;
+}
+.bg .progressDay .decade{
+    background: white;
+    width: 80rpx;
+    background: #eff5f2;
+    margin: 10rpx;
+    margin-top: 0;
+    font-size: 84rpx;
+    font-weight: bold;
+}
+.bg .progressDay .one{
+    background: white;
+    width: 80rpx;
+    background: #eff5f2;
+    margin: 10rpx;
+     margin-top: 0;
+     font-size: 84rpx;
+    font-weight: bold;
+}
+
+
+.bg .attend{
+    width: 345rpx;
+    height:130rpx;
+    text-align: center;
+    line-height: 130rpx;
+    font-size: 45rpx;
+    font-weight: bold;
+    background: white;
+    border-radius: 10rpx;
+    margin: 100rpx auto;
+    margin-bottom: 50rpx;
+}
+.text{
+    color:white;
+    font-size: 27rpx;
+    padding:80rpx;
+    padding-top:50rpx;
+}
+.imageUrl{
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 50%;
+    background: white;
+    margin: 0 auto;
+}
+.imageUrl image{
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 50%;
+}

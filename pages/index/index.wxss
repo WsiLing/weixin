@@ -1,0 +1,123 @@
+/**index.wxss**/
+
+page{
+ background: #f0eff5; 
+}
+.recite_bg{
+  background: #f0eff5;
+  color:#666;
+  height: 100%;
+  font-family: "微软雅黑";
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  min-height: 100%;
+}
+.text{
+  padding: 30rpx;
+  background: white;
+}
+.recite_title{
+  list-style-type:circle;
+  font-size: 35rpx;
+}
+.recite_content{
+  width: 650rpx;
+  padding: 10px;
+  padding-top: 0;
+  font-size: 30rpx;
+  color:#3699ff;
+  
+}
+.mark{
+  color:red;
+}
+.recite_content .translate{
+  margin: 60rpx 0rpx;
+  color: #6b6b6b;
+}
+.recite_content .translate view{
+  margin: 10rpx 0;
+  padding-left: 30rpx;
+}
+.recite_content .know view{
+  margin: 10rpx 0;
+  padding-left: 30rpx;
+}
+
+.recite_content .know{
+  margin: 40rpx 0rpx;
+  color: #6b6b6b;
+}
+.recite_content .content{
+  text-indent: 60rpx;
+}
+.recite_content .title{
+  font-size: 35rpx;
+}
+
+.recite_content image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+.btn_broadcast{
+  text-align: center;
+  padding-top:30rpx;
+}
+
+.recite_start{
+  padding:20rpx 40rpx;
+}
+.recite_start progress{
+  width: 100%;
+  float: right;
+  font-size: 90rpx;
+  margin: 20rpx 0 20rpx 0;
+}
+.recite_end{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+  padding: 0 10rpx;
+}
+.recite_end button{
+  width: 210rpx;
+  border:1px solid #a2d0ff;
+  background-color: white;
+  color:#3699ff;
+}
+
+
+progress{
+  color:#3699ff;
+  font-size: 45rpx;
+  font-weight: bolder;
+}
+
+
+
+/*.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}*/

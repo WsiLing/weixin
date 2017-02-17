@@ -1,0 +1,185 @@
+
+.bg{
+    background: #f0eff5;
+    overflow: hidden;
+    font-family: "微软雅黑";
+    width: 100%;
+    height:1235rpx;
+}
+.head{
+    overflow: hidden;
+    background:url('http://qy.gzpeiyou.com/Public/60s/progressBg.png');
+    width: 100%;
+    height:665rpx;
+    background-size: 100%;
+}
+
+.head .decade{
+    color: #3699ff;
+    font-size: 100rpx;
+    z-index: 10;
+    font-weight: bold;
+    position: absolute;
+    top:85rpx;
+    left:360rpx; 
+}
+.head .one{
+    color: #3699ff;
+    font-size: 100rpx;
+    z-index: 10;
+    font-weight: bold;
+    position: absolute;
+    left:460rpx; 
+    top:85rpx;
+}
+
+.dayProgress{
+    overflow: hidden;
+    margin:0 5%;
+    margin-top: 275rpx;
+    padding-left: 55rpx;
+}
+.dayProgress .proBg{
+    display: block;
+    width: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border: 2px solid #0594ea;
+    border-radius: 50%;
+    background: #e1f0ff;
+}
+.dayProgress view{
+    float:left;
+    width: 85rpx;
+    font-size: 25rpx;
+    text-align: center;
+    height: 87rpx;
+}
+.dayProgress view image{
+    width:60rpx;
+    height: 40rpx;
+}
+
+/*.head{
+    overflow: hidden;
+    background: #d7ebff;
+}
+.head image{
+    width: 100%;
+    height: 200rpx;
+    position: relative;
+}
+.head view{
+    position: absolute;
+    color: #3699ff;
+    font-size: 120rpx;
+    z-index: 10;
+    font-weight: bold;
+}
+.head .decade{
+    top:20rpx;
+    left:95rpx; 
+}
+.head .one{
+    left:225rpx; 
+    top:20rpx;
+}*/
+.record_progress{
+    position: relative;
+    background: #d7ebff;
+}
+.record_progress .proimg{
+    position: absolute;
+    top:0rpx;
+    left: 0;
+    z-index: 10;
+}
+.record_progress .imgbg{
+    z-index: 1;
+}
+.record_progress  image{
+    height: 480rpx;
+    width:100%;
+}
+
+.dayBox{
+    text-align: center;
+    background:white;
+    padding: 30rpx;
+    font-size:40rpx;
+    color:#333;
+    padding-top: 0;
+}
+.dayBox text{
+    color:#3699ff;
+    font-size:50rpx;
+}
+.dayBox .successDay{
+    font-size: 110rpx;
+    border-bottom: 2px solid #3699ff;
+    padding: 0 35rpx;
+    margin: 0 10rpx;
+}
+
+.waitHintText {
+    text-align: center;
+    padding-top:100rpx;
+}
+.waitHintText image{
+    width:200rpx;
+    height: 200rpx;
+    padding:60rpx 0rpx;
+}
+.waitHintText .hintText{
+    font-size: 30rpx;
+    color:#999;
+    margin-bottom: 20rpx;
+}
+
+/*
+.fooster {
+    width: 100%;
+    text-align: center;
+}
+.fooster image {
+    width: 100%;
+    height:62px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.record_progress{
+    position: relative;
+}
+.record_progress .progressTitle{
+    position: absolute;
+    left: 30rpx;
+    top:20rpx;
+    font-size: 50rpx;
+    color:#8360B9;
+}
+.record_progress .day{
+    position: absolute;
+    bottom:10rpx;
+    font-size: 50rpx;
+    color:#8360B9;
+    text-align: center;
+    width: 100%;
+}
+.record_progress .day text{
+    font-weight: bold;
+    font-size: 45rpx;
+    text-decoration: underline;
+    padding: 0 10rpx;
+}
