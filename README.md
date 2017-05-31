@@ -1,2 +1,2 @@
-# weixin2
-demo2
+# weixin
+demo
